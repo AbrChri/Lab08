@@ -31,7 +31,9 @@ class Controller:
             if prezzo_medio is not None:
                 for distributore_media in prezzo_medio:
                     self._view.lista_visualizzazione.controls.append(
-                        ft.Text(f"{distributore_media[0]}: {distributore_media[1]:.3f} €/litro")
+                        ft.Text(f"{distributore_media:.3f} €/litro")
+                        #Nel mio model viene restituita la media in un numero solo
+                        #ft.Text(f"{distributore_media[0]}: {distributore_media[1]:.3f} €/litro")
                     )
 
     def calcola_sequenza(self, e):
